@@ -10,6 +10,8 @@ window.Player = (function() {
 	var HEIGHT = 5;
 	var INITIAL_POSITION_X = 30;
 	var INITIAL_POSITION_Y = 25;
+	var FALL = 0.3;
+	var JUMP = 0.3;
 
 	var Player = function(el, game) {
 		this.el = el;
@@ -26,17 +28,11 @@ window.Player = (function() {
 	};
 
 	Player.prototype.onFrame = function(delta) {
-		if (Controls.keys.right) {
-			this.pos.x += delta * SPEED;
-		}
-		if (Controls.keys.left) {
-			this.pos.x -= delta * SPEED;
-		}
-		if (Controls.keys.down) {
-			this.pos.y += delta * SPEED;
-		}
-		if (Controls.keys.up) {
-			this.pos.y -= delta * SPEED;
+		//jump when you push space else he falls down.
+		if (Controls.didJump()) {
+			this.pos.y -= JUMP * SPEED;
+		} else {
+				this.pos.y += FALL;
 		}
 
 		this.checkCollisionWithBounds();

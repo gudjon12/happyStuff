@@ -6,8 +6,7 @@
 	left: 0;
 	width: 5em;
 	height: 5em;
-	margin-top: -2.5em;
-	margin-left: -2.5em;
+
 	background: blue;
 	transfrom: translateZ(0);
 }
