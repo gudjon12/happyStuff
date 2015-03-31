@@ -5,6 +5,7 @@
 	width: 5em;
 	height: 5em;
 	background: blue;
+	transfrom: translateZ(0);
 }
 
 .Scoreboard {
@@ -19,6 +20,8 @@
 	text-align: center;
 	-webkit-transform: translate(0, -40em);
 	-webkit-transition: -webkit-transform 0.5s;
+	transform: translate(0, -40em);
+	transition: transform 0.5s;
 }
 
 /**
@@ -26,6 +29,7 @@
 */
 .Scoreboard.is-visible {
 	-webkit-transform: none;
+	transform: none;
 }
 
 .Scoreboard-restart {
