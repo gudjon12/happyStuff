@@ -1,12 +1,17 @@
+
+
 .Player {
 	position: absolute;
 	top: 0;
 	left: 0;
 	width: 5em;
 	height: 5em;
+	margin-top: -2.5em;
+	margin-left: -2.5em;
 	background: blue;
 	transfrom: translateZ(0);
 }
+
 
 .Scoreboard {
 	position: absolute;
@@ -65,4 +70,26 @@ margin-left: -51.2em;
 margin-top: -28.8em;
 overflow: hidden;
 background: red;
+}
+
+.Player-wings {
+	position: absolute;
+	top: 1.5em;
+	left: 1em;
+	width: 2em;
+	height: 1em;
+	
+	background: yellow;
+	transform-origin: top left;
+	animation: 0.4s flap alternate infinite;
+	
+}
+
+@keyframes flap {
+	from {
+		transform: rotateX(0);
+	}
+	to {
+		transform: rotateX(180deg);
+	}
 }
