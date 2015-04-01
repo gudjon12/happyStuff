@@ -69,6 +69,8 @@ margin-left: -51.2em;
 margin-top: -28.8em;
 overflow: hidden;
 background: red;
+background-image: url('/images/backround.png');
+background-position-y: -5em;
 }
 
 .Player-wings {
@@ -92,3 +94,13 @@ background: red;
 		transform: rotateX(180deg);
 	}
 }
+
+.Ground {
+	position: absolute;
+	width: 204.8em;
+	height: 7.6em;
+	margin-top: 50em;
+	background-image: url('/images/ground.png');
+	background-repeat: repeat-x;
+}
+

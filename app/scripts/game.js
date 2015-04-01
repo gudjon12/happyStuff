@@ -8,9 +8,13 @@ window.Game = (function() {
 	 * @constructor
 	 */
 	var Game = function(el) {
+	
 		this.el = el;
+		this.ground = new window.Ground(this.el.find('.Ground'), this);
 		this.player = new window.Player(this.el.find('.Player'), this);
 		this.isPlaying = false;
+
+		
 
 		var fontSize = Math.min(
 			window.innerWidth / 102.4,
@@ -37,7 +41,9 @@ window.Game = (function() {
 		this.lastFrame = now;
 
 		// Update game entities.
+		this.ground.onFrame(delta);
 		this.player.onFrame(delta);
+		//this.pips.onframe(delta);
 
 		// Request next frame.
 		window.requestAnimationFrame(this.onFrame);
