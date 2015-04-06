@@ -1,0 +1,18 @@
+/* ----------------------------------------------------
+   created with http://www.codeandweb.com/texturepacker 
+   ----------------------------------------------------
+   $TexturePacker:SmartUpdate:48cc09c8c1e70bf914d48bf74006875e:82f62c03b6b4ad6bc3b554a8db1b949b:e66d0b4f2b9bc844fce3ad06c99bb024$
+   ----------------------------------------------------
+
+   usage: <span class="{-spritename-} sprite"></span>
+
+   replace {-spritename-} with the sprite you like to use
+
+*/
+
+.sprite {display:inline-block; overflow:hidden; background-repeat: no-repeat;background-image:url(red.png);}
+
+.red-1 {width:63px; height:43px; background-position: -0px -0px}
+.red-2 {width:63px; height:43px; background-position: -63px -0px}
+.red-3 {width:63px; height:43px; background-position: -126px -0px}
+.red-4 {width:63px; height:43px; background-position: -189px -0px}

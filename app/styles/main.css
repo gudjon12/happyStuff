@@ -1,14 +1,35 @@
+@-webkit-keyframes fly {
+    from { background-position: 0px; }
+    to { background-position: -252px; }  /* <-- width of spritesheet*/
+}
 
+@-moz-keyframes fly {
+    from { background-position: 0px; }
+    to { background-position: -252px; } /* <-- width of spritesheet*/
+}
+
+@-o-keyframes fly {
+    from { background-position: 0px; }
+    to { background-position: -252px; } /* <-- width of spritesheet*/
+}
+
+@keyframes fly {
+    from { background-position: 0px; }
+    to { background-position: -252px; } /* <-- width of spritesheet*/
+}
 
 .Player {
 	position: absolute;
 	top: 0;
 	left: 0;
 	width: 5em;
-	height: 5em;
-
-	background: blue;
-	transfrom: translateZ(0);
+	height: 4em;
+	margin: 0 auto;
+	background-image: url('/images/red.png');
+	-webkit-animation: fly 1s steps(4) infinite; 
+    -moz-animation: fly 1s steps(4) infinite;
+    -o-animation: fly 1s steps(4) infinite;
+    animation: fly 1s steps(4) infinite;
 }
 
 
@@ -44,55 +65,36 @@
 	background: none;
 	cursor: pointer;
 }
+
 .Scoreboard-restartText {
-font-family: 'Comic Sans MS', serif;
-font-size: 2.4em;
-color: white;
+	font-family: 'Comic Sans MS', serif;
+	font-size: 2.4em;
+	color: white;
+	}
+	body {
+		 background: black;
 }
-body {
-background: black;
-}
+
 .browsehappy {
-margin: 0.2em 0;
-background: ?#?ccc?;
-color: #000;
-padding: 0.2em 0;
+	margin: 0.2em 0;
+	background: ?#?ccc?;
+	color: #000;
+	padding: 0.2em 0;
 }
+
 .GameCanvas {
-font-size: 10px;
-position: absolute;
-left: 50%;
-top: 50%;
-width: 102.4em;
-height: 57.6em;
-margin-left: -51.2em;
-margin-top: -28.8em;
-overflow: hidden;
-background: red;
-background-image: url('/images/backround.png');
-background-position-y: -5em;
-}
-
-.Player-wings {
+	font-size: 10px;
 	position: absolute;
-	top: 1.5em;
-	left: 1em;
-	width: 2em;
-	height: 1em;
-	
-	background: yellow;
-	transform-origin: top left;
-	animation: 0.4s flap alternate infinite;
-	
-}
-
-@keyframes flap {
-	from {
-		transform: rotateX(0);
-	}
-	to {
-		transform: rotateX(180deg);
-	}
+	left: 50%;
+	top: 50%;
+	width: 102.4em;
+	height: 57.6em;
+	margin-left: -51.2em;
+	margin-top: -28.8em;
+	overflow: hidden;
+	background: red;
+	background-image: url('/images/sky.png');
+	background-position-y: -5em;
 }
 
 .Ground {
